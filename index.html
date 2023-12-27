@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css">
+
+    <style>
+        :root {
+            --size: 1.4;
+            --cursor-line: 0.5;
+            --background: #d4f4cc;
+            --color: #21013d;
+        }
+    </style>
+
+    <title>Meg Sheng</title>
+</head>
+
+<body>
+    <script>
+        $('body').terminal({
+            explore: function() {
+                this.echo(' some suggested commands:\n\tabout\n\tprojects\n\tposts\n\temail\n\tclear\n\ hint: there are more commands. feel free to try other keywords <3');
+            },
+            about: function() {
+              this.echo(" i'm a front-end developer with proven background in the marketing industry. \n curious and actively learning back-end development. \n looking for an opportunity to grow as a versatile full-stack developer, solving problems from all ends.\n prior to this role, i was employed as a marketing analyst in guangzhou. proceed(). \n the website makes no sense, but that's exactly the point! ");
+            },
+            posts: function() {
+              this.echo("it will be back later!");
+            },
+            email: function() {
+              const email = $('<a>',{
+            text:'mengyunsh@gmail.com',
+            href:'mailto:mengyunsh@gmail.com'
+        });
+            this.echo(email)
+            },
+            projects: function() {
+              this.echo(" project1");
+              this.echo(" project2");
+              this.echo(" project3");
+            },
+            project1: function() {
+              window.location.href = "";
+            },
+            project2: function() {
+              window.location.href = "";
+            },
+            project3: function() {
+            window.location.href = "";
+            },
+        
+        }, {
+            greetings: "aloha, i'm meg! welcome to my web terminal :) \nfor a list of available commands, type 'explore' to investigate."
+        });
+        </script>
+    
+</body>
+</html>
